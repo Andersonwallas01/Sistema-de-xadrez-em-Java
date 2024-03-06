@@ -29,4 +29,12 @@ public class Board {
     public void setColumns(int columns) {
         this.columns = columns;
     }
+
+    public Piece piece (int row, int column) {
+        return pieces[column][row]; //metodo para estanciar uma peÇa em uma linha e em uma coluna
+    }
+
+    public Piece piece (Position position){
+        return pieces[position.getRow()][position.getColumn()];
+    }
 }
