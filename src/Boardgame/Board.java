@@ -16,19 +16,20 @@ public class Board {
         this.columns = columns;
         pieces = new Piece[rows][columns];
     }
+    public int getColumns() {
+        return columns;
+    }
 
     public int getRows() {
         return rows;
     }
 
 
-    public int getColumns() {
-        return columns;
-    }
 
 
-    public Piece piece (int row, int column) {
-        if (! positionExists(row, column)){
+
+    public Piece piece (int column, int row) {
+        if (! positionExists(column, row)){
             throw new BoadException("position not on the board");
         }
         return pieces[column][row]; //metodo para estanciar uma peça em uma linha e em uma coluna
